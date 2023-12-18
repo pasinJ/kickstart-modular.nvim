@@ -4,7 +4,22 @@
 vim.defer_fn(function()
   require('nvim-treesitter.configs').setup {
     -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = { 'lua', 'rust', 'vimdoc', 'vim', 'bash', 'html' },
+    ensure_installed = {
+      'lua',
+      'rust',
+      'vimdoc',
+      'vim',
+      'bash',
+      'html',
+      'dockerfile',
+      'json',
+      'jsonc',
+      'json5',
+      'markdown',
+      'javascript',
+      'typescript',
+      'tsx',
+    },
 
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
     auto_install = false,
@@ -36,26 +51,26 @@ vim.defer_fn(function()
           ['ic'] = '@class.inner',
         },
       },
-      move = {
-        enable = true,
-        set_jumps = true, -- whether to set jumps in the jumplist
-        goto_next_start = {
-          [']m'] = '@function.outer',
-          [']]'] = '@class.outer',
-        },
-        goto_next_end = {
-          [']M'] = '@function.outer',
-          [']['] = '@class.outer',
-        },
-        goto_previous_start = {
-          ['[m'] = '@function.outer',
-          ['[['] = '@class.outer',
-        },
-        goto_previous_end = {
-          ['[M'] = '@function.outer',
-          ['[]'] = '@class.outer',
-        },
-      },
+      -- move = {
+      --   enable = true,
+      --   set_jumps = true, -- whether to set jumps in the jumplist
+      --   goto_next_start = {
+      --     [']m'] = '@function.outer',
+      --     [']]'] = '@class.outer',
+      --   },
+      --   goto_next_end = {
+      --     [']M'] = '@function.outer',
+      --     [']['] = '@class.outer',
+      --   },
+      --   goto_previous_start = {
+      --     ['[m'] = '@function.outer',
+      --     ['[['] = '@class.outer',
+      --   },
+      --   goto_previous_end = {
+      --     ['[M'] = '@function.outer',
+      --     ['[]'] = '@class.outer',
+      --   },
+      -- },
       swap = {
         enable = true,
         swap_next = {
